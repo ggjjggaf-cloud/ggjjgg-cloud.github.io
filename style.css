@@ -1,0 +1,329 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f2f2f2;
+    color:#111;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:white;
+}
+
+/* HEADER */
+
+header{
+    background:#000;
+    color:white;
+    padding:15px 20px;
+}
+
+.top-menu{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-bottom:20px;
+}
+
+.top-menu a{
+    font-size:14px;
+    transition:0.3s;
+}
+
+.top-menu a:hover{
+    color:#9b7bff;
+}
+
+.logo-block{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.logo img{
+    width:45px;
+}
+
+.logo-text h1{
+    font-size:22px;
+    margin-bottom:5px;
+}
+
+.logo-text p{
+    font-size:13px;
+    color:#aaa;
+}
+
+/* HERO */
+
+.hero img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+}
+
+/* PRODUCTS */
+
+.products{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.products h2{
+    font-size:38px;
+    margin-bottom:40px;
+}
+
+.products-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:25px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.card{
+    background:white;
+    border:1px solid #ccc;
+    border-radius:12px;
+    padding:20px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.card-image{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    overflow:hidden;
+    margin:0 auto 20px;
+    background:#000;
+}
+
+.card h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.price{
+    margin-bottom:20px;
+    font-weight:bold;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    background:#000;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#6e42ff;
+}
+
+/* ABOUT */
+
+.about{
+    padding:60px 20px;
+    background:white;
+}
+
+.about-wrapper{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:250px 1fr;
+    gap:40px;
+    align-items:start;
+}
+
+.about h2{
+    font-size:32px;
+}
+
+.about p{
+    font-size:18px;
+    line-height:1.7;
+    color:#333;
+}
+
+/* STEPS */
+
+.steps{
+    padding:60px 20px;
+}
+
+.steps-title{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:40px;
+}
+
+.steps-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:25px;
+}
+
+.step-card{
+    background:#e9e9e9;
+    border-radius:10px;
+    padding:40px 25px;
+    text-align:center;
+    min-height:250px;
+}
+
+.step-card h3{
+    margin-top:20px;
+    margin-bottom:15px;
+    font-size:20px;
+}
+
+.step-card p{
+    color:#444;
+    line-height:1.6;
+}
+
+.icon{
+    font-size:45px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#000;
+    color:white;
+    padding:50px 20px;
+}
+
+.footer-wrapper{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:40px;
+    align-items:start;
+}
+
+.footer-logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+footer ul{
+    list-style:none;
+    margin-top:10px;
+}
+
+footer li{
+    margin-bottom:8px;
+    color:#ccc;
+}
+
+.footer-center{
+    text-align:center;
+    font-size:28px;
+    align-self:center;
+}
+
+.footer-right p{
+    margin-bottom:10px;
+    color:#ccc;
+}
+
+/* TABLET */
+
+@media(max-width:900px){
+
+    .products-grid{
+    grid-template-columns:repeat(2, 1fr);
+    }
+
+    .steps-grid{
+    grid-template-columns:1fr;
+    }
+
+    .about-wrapper{
+    grid-template-columns:1fr;
+    }
+
+    .footer-wrapper{
+    grid-template-columns:1fr;
+    text-align:center;
+    }
+
+    .footer-logo{
+    justify-content:center;
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .top-menu{
+    gap:15px;
+    }
+
+    .products h2{
+    font-size:28px;
+    }
+
+    .products-grid{
+    grid-template-columns:1fr;
+    }
+
+    .hero img{
+    height:250px;
+    }
+
+    .card-image{
+    width:110px;
+    height:110px;
+    }
+
+    .about p{
+    font-size:16px;
+    }
+
+    .steps-title{
+    font-size:26px;
+    }
+
+    .footer-center{
+    font-size:22px;
+    }
+}

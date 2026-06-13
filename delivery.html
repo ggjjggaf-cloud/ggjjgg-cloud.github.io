@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Доставка та оплата | Brygacomp</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Додаткові стилі суто для цієї сторінки, щоб не засмічувати основний CSS */
+    .info-section { padding: 60px 20px; max-width: 1200px; margin: auto; }
+    .info-title { text-align: center; font-size: 38px; margin-bottom: 40px; text-transform: uppercase; }
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .info-block { background: white; padding: 40px; border-radius: 12px; border: 1px solid #ccc; }
+    .info-block h3 { font-size: 24px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+    .info-block ul { list-style: none; }
+    .info-block li { margin-bottom: 15px; font-size: 16px; line-height: 1.6; color: #333; position: relative; padding-left: 20px; }
+    .info-block li::before { content: "•"; color: #6e42ff; font-weight: bold; position: absolute; left: 0; }
+    @media(max-width: 768px) { .info-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="top-menu">
+      <a href="delivery.html">доставка</a>
+      <a href="delivery.html">оплата</a>
+      <a href="catalog.html">повний каталог</a>
+      <a href="contacts.html">наші контакти</a>
+      <a href="contacts.html">відгуки</a>
+    </nav>
+    <div class="logo-block">
+      <div class="logo">
+        <img src="assets/logo.png" alt="">
+      </div>
+      <div class="logo-text">
+        <a href="index.html" style="color:white;"><h1>brygacomp</h1></a>
+        <p>магазин комп'ютерів</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="info-section">
+    <h2 class="info-title">Умови доставки та оплати</h2>
+    
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🚚 Доставка</h3>
+        <ul>
+          <li><strong>Нова Пошта:</strong> Відправка у відділення або поштомат по всій Україні (1–3 дні).</li>
+          <li><strong>Адресна доставка:</strong> Кур'єром Нової Пошти до ваших дверей.</li>
+          <li><strong>Самовивіз:</strong> Можливість забрати ПК особисто з нашого шоуруму в Києві (вул. Хрещатик 333).</li>
+          <li>Усі комп'ютери застраховані на повну вартість та надійно упаковані пінопластом.</li>
+        </ul>
+      </div>
+
+      <div class="info-block">
+        <h3>💳 Оплата</h3>
+        <ul>
+          <li><strong>Післяплата (Накладений платіж):</strong> Оплата при отриманні у відділенні Нової Пошти після огляду.</li>
+          <li><strong>Оплата карткою:</strong> Онлайн-оплата на сайті або за реквізитами ФОП.</li>
+          <li><strong>Розстрочка:</strong> Оплата частинами від ПриватБанк або Монобанк до 10 платежів без переплат.</li>
+          <li>Готівкою або через термінал при самовивозі з магазину.</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-wrapper">
+      <div>
+        <div class="footer-logo">
+          <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png" alt="">
+          </div>
+          <h2>Brygacomp</h2>
+        </div>
+        <ul>
+          <li>TikTok</li>
+          <li>Instagram</li>
+          <li>YouTube</li>
+          <li>Viber</li>
+        </ul>
+      </div>
+      <div class="footer-center">Чекаємо саме тебе!</div>
+      <div class="footer-right">
+        <h3>Контакти</h3>
+        <p>Адреса: Київ вул. Хрещатик 333</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Відгуки клієнтів | Brygacomp</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .reviews-container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+    .reviews-header-block { text-align: center; margin-bottom: 50px; }
+    .reviews-header-block h2 { font-size: 38px; margin-bottom: 15px; }
+    
+    /* Статистика рейтингу */
+    .rating-summary { display: inline-flex; align-items: center; gap: 15px; background: white; padding: 15px 30px; border-radius: 50px; border: 1px solid #ccc; font-size: 20px; font-weight: bold; }
+    .stars { color: #ffca28; font-size: 24px; }
+
+    .reviews-layout { display: grid; grid-template-columns: 1fr 380px; gap: 40px; align-items: start; }
+    
+    /* Список відгуків */
+    .review-card { background: white; border: 1px solid #ccc; border-radius: 12px; padding: 25px; margin-bottom: 20px; transition: 0.3s; }
+    .review-card:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .review-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+    .reviewer-info h4 { font-size: 18px; margin-bottom: 2px; }
+    .review-date { font-size: 13px; color: #888; }
+    .review-text { line-height: 1.6; color: #333; }
+    .purchased-item { margin-top: 12px; display: inline-block; background: #e9e9e9; padding: 4px 10px; border-radius: 4px; font-size: 13px; font-weight: bold; }
+
+    /* Форма */
+    .add-review-form { background: #000; color: white; padding: 30px; border-radius: 12px; position: sticky; top: 20px; }
+    .add-review-form h3 { font-size: 22px; margin-bottom: 20px; text-align: center; }
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; margin-bottom: 8px; font-size: 14px; color: #ccc; }
+    .add-review-form input, .add-review-form textarea, .add-review-form select { width: 100%; padding: 12px; border: 1px solid #444; background: #1a1a1a; color: white; border-radius: 6px; font-family: Arial, sans-serif; }
+    .add-review-form button { width: 100%; background: #6e42ff; font-weight: bold; padding: 14px; margin-top: 10px; }
+    .add-review-form button:hover { background: #552ee0; }
+
+    @media(max-width: 900px) { .reviews-layout { grid-template-columns: 1fr; } .add-review-form { position: static; } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="top-menu">
+      <a href="delivery.html">доставка</a>
+      <a href="delivery.html">оплата</a>
+      <a href="catalog.html">повний каталог</a>
+      <a href="contacts.html">наші контакти</a>
+      <a href="reviews.html">відгуки</a>
+    </nav>
+    <div class="logo-block">
+      <div class="logo"><img src="assets/logo.png" alt=""></div>
+      <div class="logo-text">
+        <a href="index.html" style="color:white;"><h1>brygacomp</h1></a>
+        <p>магазин комп'ютерів</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="reviews-container">
+    <div class="reviews-header-block">
+      <h2>Відгуки про Brygacomp</h2>
+      <div class="rating-summary">
+        <span>4.9 / 5</span>
+        <span class="stars">★★★★★</span>
+        <span style="color: #666; font-weight: normal; font-size: 15px;">(142 відгуки)</span>
+      </div>
+    </div>
+
+    <div class="reviews-layout">
+      <!-- Ліворуч: Стрічка відгуків -->
+      <section class="reviews-list">
+        
+        <div class="review-card">
+          <div class="review-top">
+            <div class="reviewer-info">
+              <h4>Артем В.</h4>
+              <span class="review-date">Вчора</span>
+            </div>
+            <span class="stars">★★★★★</span>
+          </div>
+          <p class="review-text">Замовив збірку на Ryzen 9 9950X. Комп просто монстр! Справжній космоліgeneric. Кабель-менеджмент зроблений на совість, все укладено ниточка до ниточки. Окремий лайк за стрес-тести перед відправкою.</p>
+          <span class="purchased-item">Придбано: ПК Ryzen 9 / RTX 5080</span>
+        </div>
+
+        <div class="review-card">
+          <div class="review-top">
+            <div class="reviewer-info">
+              <h4>Ярослав</h4>
+              <span class="review-date">3 дні тому</span>
+            </div>
+            <span class="stars">★★★★★</span>
+          </div>
+          <p class="review-text">Чудовий магазин! Допомогли підібрати залізо суто під мій обмежений бюджет, не намагалися "впарити" дорожче. Зібрали за 2 дні, відправили Новою Поштою в обрешітці. Рекомендую!</p>
+          <span class="purchased-item">Придбано: ПК Core Ultra i5</span>
+        </div>
+
+        <div class="review-card">
+          <div class="review-top">
+            <div class="reviewer-info">
+              <h4>Анна О.</h4>
+              <span class="review-date">Тиждень тому</span>
+            </div>
+            <span class="stars">★★★★☆</span>
+          </div>
+          <p class="review-text">Брала комп'ютер сину на подарунок. Працює тихо, підсвітка дитині дуже подобається. Зняла одну зірочку за те, що кур'єр запізнився на дві години, але сам магазин відпрацював на 10/10.</p>
+          <span class="purchased-item">Придбано: Alien Ware</span>
+        </div>
+
+      </section>
+
+      <!-- Праворуч: Форма зворотного зв'язку -->
+      <aside class="add-review-form">
+        <h3>Залишити відгук</h3>
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label>Ваше ім'я</label>
+            <input type="text" required placeholder="Іван">
+          </div>
+          <div class="form-group">
+            <label>Яку модель ПК купували?</label>
+            <select>
+              <option>Core Ultra i5 235F</option>
+              <option>Ryzen 9 9950X</option>
+              <option>Alien Ware</option>
+              <option>Інша індивідуальна збірка</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Ваша оцінка</label>
+            <select style="color: #ffca28;">
+              <option value="5">★★★★★ (5/5)</option>
+              <option value="4">★★★★☆ (4/5)</option>
+              <option value="3">★★★☆☆ (3/5)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Текст відгуку</label>
+            <textarea rows="5" required placeholder="Поділіться враженнями від покупки та сервісу..."></textarea>
+          </div>
+          <button type="submit">Опублікувати</button>
+        </form>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-wrapper">
+      <div>
+        <div class="footer-logo">
+          <div class="logo"><img src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png" alt=""></div>
+          <h2>Brygacomp</h2>
+        </div>
+        <ul>
+          <a href=""><li>TikTok</li></a>
+          <a href=""><li>Instagram</li></a>
+          <a href=""><li>YouTube</li></a>
+          <a href=""><li>Viber</li></a>
+        </ul>
+      </div>
+      <div class="footer-center">Чекаємо саме тебе!</div>
+      <div class="footer-right">
+        <h3>Контакти</h3>
+        <p>Адреса: Київ вул. Хрещатик 333</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

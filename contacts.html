@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Контакти та Відгуки | Brygacomp</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contacts-container { max-width: 1200px; margin: auto; padding: 60px 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+    .contact-form-block h2, .reviews-block h2 { font-size: 32px; margin-bottom: 25px; }
+    
+    /* Стилі форми */
+    .feedback-form { display: flex; flex-direction: column; gap: 15px; background: white; padding: 30px; border-radius: 12px; border: 1px solid #ccc; }
+    .feedback-form input, .feedback-form textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-family: Arial, sans-serif; }
+    .feedback-form button { align-self: start; background: #000; color: white; padding: 12px 25px; border-radius: 6px; cursor: pointer; transition: 0.3s; }
+    .feedback-form button:hover { background: #6e42ff; }
+
+    /* Стилі відгуків */
+    .review-item { background: white; padding: 20px; border-radius: 10px; border: 1px solid #ccc; margin-bottom: 15px; }
+    .review-header { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: bold; }
+    .rating { color: #ffca28; }
+    
+    @media(max-width: 900px) { .contacts-container { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="top-menu">
+      <a href="delivery.html">доставка</a>
+      <a href="delivery.html">оплата</a>
+      <a href="catalog.html">повний каталог</a>
+      <a href="contacts.html">наші контакти</a>
+      <a href="reviews.html">відгуки</a>
+    </nav>
+    <div class="logo-block">
+      <div class="logo"><img src="assets/logo.png" alt=""></div>
+      <div class="logo-text">
+        <a href="index.html" style="color:white;"><h1>brygacomp</h1></a>
+        <p>магазин комп'ютерів</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="contacts-container">
+    <div class="contact-form-block">
+      <h2>Зв'язатися з нами</h2>
+      <p style="margin-bottom: 20px; color: #555; line-height: 1.6;">
+        Маєте питання щодо замовлення чи потрібна допомога з вибором заліза? Напишіть нам, і наш менеджер зв'яжеться з вами найближчим часом!
+      </p>
+      
+      <form class="feedback-form" action="#" method="POST">
+        <input type="text" placeholder="Ваше ім'я" required>
+        <input type="email" placeholder="Ваш Email або Telegram" required>
+        <textarea rows="5" placeholder="Ваше повідомлення або відгук" required></textarea>
+        <button type="submit">Надіслати</button>
+      </form>
+    </div>
+
+    <div class="reviews-block">
+      <h2>Відгуки покупців</h2>
+      
+      <div class="review-item">
+        <div class="review-header">
+          <span>Олександр М.</span>
+          <span class="rating">⭐⭐⭐⭐⭐</span>
+        </div>
+        <p>Замовив збірку на Ryzen 9 та RTX 5080. Комп приїхав мега-надійно упакований. Кабель-менеджмент просто ідеальний. Тести в іграх літають!</p>
+      </div>
+
+      <div class="review-item">
+        <div class="review-header">
+          <span>Дмитро К.</span>
+          <span class="rating">⭐⭐⭐⭐⭐</span>
+        </div>
+        <p>Купив молодшу модель на Core i5. Для моїх задач та CS2 вистачає з головою. Дякую хлопцям за швидку збірку за 2 дні!</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-wrapper">
+      <div>
+        <div class="footer-logo">
+          <div class="logo"><img src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png" alt=""></div>
+          <h2>Brygacomp</h2>
+        </div>
+        <ul>
+          <li>TikTok</li>
+          <li>Instagram</li>
+          <li>YouTube</li>
+          <li>Viber</li>
+        </ul>
+      </div>
+      <div class="footer-center">Чекаємо саме тебе!</div>
+      <div class="footer-right">
+        <h3>Контакти</h3>
+        <p>Адреса: Київ вул. Хрещатик 333</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

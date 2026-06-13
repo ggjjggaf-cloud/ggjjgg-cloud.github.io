@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Каталог ПК | Brygacomp</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .catalog-container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 280px 1fr; gap: 30px; }
+    
+    /* Фільтри */
+    .filters { background: white; padding: 25px; border-radius: 12px; border: 1px solid #ccc; height: fit-content; }
+    .filters h3 { font-size: 20px; margin-bottom: 20px; border-bottom: 2px solid #000; padding-bottom: 10px; }
+    .filter-group { margin-bottom: 25px; }
+    .filter-group h4 { font-size: 16px; margin-bottom: 12px; color: #444; }
+    .filter-group label { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; cursor: pointer; font-size: 15px; }
+    .filter-group input[type="checkbox"] { width: 18px; height: 18px; accent-color: #6e42ff; }
+
+    /* Заголовок та сортування */
+    .catalog-content h2 { font-size: 32px; margin-bottom: 10px; text-align: left; }
+    .catalog-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; background: #e9e9e9; padding: 10px 20px; border-radius: 8px; }
+    .catalog-meta select { padding: 8px 12px; border-radius: 6px; border: 1px solid #ccc; background: white; }
+
+    /* Перевизначення сітки для сторінки каталогу (4 в ряд на десктопі) */
+    .catalog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+    @media(max-width: 1024px) { 
+      .catalog-container { grid-template-columns: 1fr; }
+      .filters { display: none; /* Для мобільних зазвичай роблять випадаючим, спрощено приховуємо */ }
+      .catalog-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media(max-width: 600px) { .catalog-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="top-menu">
+      <a href="delivery.html">доставка</a>
+      <a href="delivery.html">оплата</a>
+      <a href="catalog.html">повний каталог</a>
+      <a href="contacts.html">наші контакти</a>
+      <a href="reviews.html">відгуки</a>
+    </nav>
+    <div class="logo-block">
+      <div class="logo"><img src="assets/logo.png" alt=""></div>
+      <div class="logo-text">
+        <a href="index.html" style="color:white;"><h1>brygacomp</h1></a>
+        <p>магазин комп'ютерів</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="catalog-container">
+    <!-- Ліва колонка: Фільтри -->
+    <aside class="filters">
+      <h3>Фільтрація</h3>
+      
+      <div class="filter-group">
+        <h4>Відеокарта</h4>
+        <label><input type="checkbox"> RTX 5090</label>
+        <label><input type="checkbox"> RTX 5080</label>
+        <label><input type="checkbox"> RTX 5070</label>
+        <label><input type="checkbox"> RTX 5060 Ti</label>
+      </div>
+
+      <div class="filter-group">
+        <h4>Процесор</h4>
+        <label><input type="checkbox"> Intel Core Ultra 9</label>
+        <label><input type="checkbox"> Intel Core Ultra 5</label>
+        <label><input type="checkbox"> AMD Ryzen 9</label>
+        <label><input type="checkbox"> AMD Ryzen 7</label>
+      </div>
+    </aside>
+
+    <!-- Права колонка: Товари -->
+    <main class="catalog-content">
+      <h2>Ігрові комп'ютери Brygacomp</h2>
+      <p style="color: #666; margin-bottom: 20px;">Знайдіть свій ідеальний ПК для геймінгу та роботи</p>
+
+      <div class="catalog-meta">
+        <span>Знайдено моделей: 6</span>
+        <select>
+          <option>За рейтингом</option>
+          <option>Від дешевих до дорогих</option>
+          <option>Від дорогих до дешевих</option>
+        </select>
+      </div>
+
+      <!-- Використовуємо класи ваших карток із головної сторінки -->
+      <div class="catalog-grid">
+        <div class="card">
+          <div class="card-image"><img src="assets/image 2.png" alt=""></div>
+          <h3>Core Ultra i5 235F</h3>
+          <div class="price">RTX 5060 Ti / V2</div>
+          <button>Купити</button>
+        </div>
+
+        <div class="card">
+          <div class="card-image"><img src="assets/image 3.png" alt=""></div>
+          <h3>Ryzen 9 9950X</h3>
+          <div class="price">RTX 5080</div>
+          <button>Купити</button>
+        </div>
+
+        <div class="card">
+          <div class="card-image"><img src="assets/image 4.png" alt=""></div>
+          <h3>Alien Ware Custom</h3>
+          <div class="price">RTX 5090</div>
+          <button>Купити</button>
+        </div>
+
+        <!-- Додаткові товари для заповнення каталогу -->
+        <div class="card">
+          <div class="card-image"><img src="assets/image 2.png" alt=""></div>
+          <h3>Ryzen 7 9700X</h3>
+          <div class="price">RTX 5070 / EVO</div>
+          <button>Купити</button>
+        </div>
+
+        <div class="card">
+          <div class="card-image"><img src="assets/image 3.png" alt=""></div>
+          <h3>Core Ultra i7 265K</h3>
+          <div class="price">RTX 5070 Ti</div>
+          <button>Купити</button>
+        </div>
+
+        <div class="card">
+          <div class="card-image"><img src="assets/image 4.png" alt=""></div>
+          <h3>Bryga Cyber Ultimate</h3>
+          <div class="price">RTX 5090 HOF</div>
+          <button>Купити</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-wrapper">
+      <div>
+        <div class="footer-logo">
+          <div class="logo"><img src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png" alt=""></div>
+          <h2>Brygacomp</h2>
+        </div>
+        <ul><li>TikTok</li><li>Instagram</li><li>YouTube</li><li>Viber</li></ul>
+      </div>
+      <div class="footer-center">Чекаємо саме тебе!</div>
+      <div class="footer-right">
+        <h3>Контакти</h3>
+        <p>Адреса: Київ вул. Хрещатик 333</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
